@@ -1,19 +1,17 @@
-export default function Quests() {
-  const quests = [
-    { name: 'First SQL Quest', level: 1, description: 'Learn basic SQL syntax' },
-    { name: 'Advanced SQL Quest', level: 10, description: 'Master JOIN operations' },
-    // Add more quests here...
-  ];
+const quests = [
+  { title: 'Complete Basic SQL Queries', description: 'Learn and execute basic SELECT queries.', status: 'In Progress' },
+  { title: 'Deploy a Cloud Service', description: 'Set up and deploy a basic cloud service.', status: 'Not Started' },
+  // Add more quests here
+];
 
+export default function Quests() {
   return (
-    <div className="p-10">
-      <h1 className="text-2xl font-bold mb-5">Quests</h1>
+    <div className="p-6">
+      <h1 className="text-3xl font-bold mb-4">Quests</h1>
       <ul>
         {quests.map((quest, index) => (
-          <li key={index} className="mb-4">
-            <h2 className="text-xl font-semibold">{quest.name}</h2>
-            <p>Required Level: {quest.level}</p>
-            <p>{quest.description}</p>
+          <li key={index} className="border-b py-2">
+            <strong>{quest.title}</strong> - {quest.description} <span className="italic">({quest.status})</span>
           </li>
         ))}
       </ul>
