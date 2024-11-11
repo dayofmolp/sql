@@ -1,4 +1,5 @@
-import CharacterCard from "@src/app/characters/CharacterCard";
+import CharacterCard from "./characters/CharacterCard";
+
 
 const characters = [
   { name: "Fren", level: 25, role: "Bard/Magic Singer of Mischief" },
