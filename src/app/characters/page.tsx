@@ -1,20 +1,17 @@
-export default function Characters() {
-  const characters = [
-    { name: 'Fren', class: 'Bard', level: 25 },
-    { name: 'Gall', class: 'Sword Master', level: 27 },
-    { name: 'Zy', class: 'Fighter', level: 24 },
-    // Add additional characters here...
-  ];
+const characters = [
+  { name: 'Fren', class: 'Bard/Magic Singer of Mischief', level: 25 },
+  { name: 'Gall', class: 'Sword Master', level: 27 },
+  // Add more characters here
+];
 
+export default function Characters() {
   return (
-    <div className="p-10">
-      <h1 className="text-2xl font-bold mb-5">Characters</h1>
+    <div className="p-6">
+      <h1 className="text-3xl font-bold mb-4">Characters</h1>
       <ul>
-        {characters.map((char, index) => (
-          <li key={index} className="mb-2">
-            <div>{char.name}</div>
-            <div>Class: {char.class}</div>
-            <div>Level: {char.level}</div>
+        {characters.map((character, index) => (
+          <li key={index} className="border-b py-2">
+            <strong>{character.name}</strong> - {character.class} (Level {character.level})
           </li>
         ))}
       </ul>
