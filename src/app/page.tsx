@@ -1,4 +1,5 @@
-import CharacterCard from "./characters/CharacterCard";
+import CharacterCard from "@/characters/CharacterCard";
+
 
 
 const characters = [
